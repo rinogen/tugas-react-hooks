@@ -1,25 +1,18 @@
-# Tugas Digistar Class Hacker Day 2
+# Tugas Digistar Class Hacker Day 3
 
 ## Hasil Tampilan
 
 1. Beranda
-   ![Beranda](./src/assets/images/Beranda.png)
 
 2. Tentang Kami
-   ![Tentang Kami](./src/assets/images/Tentang.png)
 
 3. Bantuan
-   ![Bantuan](./src/assets/images//Bantuan.png)
 
 4. Media
-   ![Media](./src/assets/images/Media.png)
-   ![Media](./src/assets/images/Media2.png)
 
 5. Kontak
-   ![Kontak](./src/assets/images/Kontak.png)
 
 6. Login
-   ![Login](./src/assets/images/Login.png)
 
 ## Available Scripts
 
