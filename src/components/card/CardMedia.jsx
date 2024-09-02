@@ -19,10 +19,10 @@ const CardMedia = ({ cardImg, cardTitle, cardDescription }) => {
             />
           </figure>
           <section className="space-y-2">
-            <h3 className="min-h-14 text-xl font-bold line-clamp-2">
+            <h3 className=" text-black dark:text-white min-h-14 text-xl font-bold line-clamp-2">
               {cardTitle}
             </h3>
-            <article className="text-gray-400 min-h-24 w-full text-justify">
+            <article className="text-gray-400 dark:text-white min-h-24 w-full text-justify">
               <div className="line-clamp-4">{cardDescription}</div>
             </article>
           </section>

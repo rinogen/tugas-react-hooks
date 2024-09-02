@@ -9,13 +9,15 @@ const Card = ({ cardTitle, cardImg, cardDescription, cardBtnText }) => {
           <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full flex-shrink-0">
             <img src={cardImg} />
           </div>
-          <h2 className="text-lg font-bold">{cardTitle}</h2>
+          <h2 className="text-black dark:text-white text-lg font-bold">
+            {cardTitle}
+          </h2>
         </div>
         <div className="flex flex-col justify-between flex-grow">
           <ul>
             {cardDescription.map((detail, index) => (
               <li
-                className="p-1 text-[16px] font-medium text-[#686E76] hover:text-[#009EA9] cursor-pointer"
+                className=" text-black dark:text-white p-1 text-[16px] font-medium text-[#686E76] hover:text-[#009EA9] cursor-pointer"
                 key={index}>
                 {detail}
               </li>

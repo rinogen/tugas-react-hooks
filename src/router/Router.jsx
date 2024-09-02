@@ -9,7 +9,7 @@ import Media from '../pages/Media';
 import Login from '../pages/Login';
 
 export default function Router() {
-  const isAuthenticated = true;
+  const isAuthenticated = false;
 
   return (
     <BrowserRouter>
