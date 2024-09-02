@@ -4,26 +4,32 @@
 
 1. Beranda
    ![Beranda](./src/assets/images/Beranda.png)
+
    ![BerandaDark](./src/assets/images/Beranda_dark.png)
 
 2. Tentang Kami
    ![Tentang](./src/assets/images/Tentang.png)
+
    ![TentangDark](./src/assets/images/Tentang_dark.png)
 
 3. Bantuan
    ![Bantuan](./src/assets/images/Bantuan.png)
+
    ![BantuanDark](./src/assets/images/Bantuan_dark.png)
 
 4. Media
    ![Media](./src/assets/images/Media.png)
+
    ![MediaDark](./src/assets/images/Media_dark.png)
 
 5. Kontak
    ![Kontak](./src/assets/images/Kontak.png)
+
    ![KontakDark](./src/assets/images/Kontak_dark.png)
 
 6. Login
    ![Login](./src/assets/images/Login.png)
+
    ![LoginDark](./src/assets/images/Login_dark.png)
 
 ## Available Scripts
