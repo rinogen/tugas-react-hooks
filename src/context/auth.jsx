@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 export const AuthContext = createContext({
   isAuthenticated: false,
@@ -7,7 +7,8 @@ export const AuthContext = createContext({
 });
 
 export const AuthProvider = ({ children }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const storedAuth = localStorage.getItem('isAuthenticated');
+  const [isAuthenticated, setIsAuthenticated] = useState(storedAuth === 'true');
 
   const login = () => {
     setIsAuthenticated(true);
@@ -16,6 +17,11 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     setIsAuthenticated(false);
   };
+
+  useEffect(() => {
+    //menyimpan status login ke local storage
+    localStorage.setItem('isAuthenticated', isAuthenticated);
+  }, [isAuthenticated]);
 
   return (
     <AuthContext.Provider value={{ isAuthenticated, login, logout }}>

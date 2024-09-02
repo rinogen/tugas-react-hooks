@@ -3,7 +3,8 @@ import { ThemeProvider } from './context/theme';
 import { useEffect, useState } from 'react';
 
 function App() {
-  const [themeMode, setThemeMode] = useState('light');
+  const storedTheme = localStorage.getItem('themeMode');
+  const [themeMode, setThemeMode] = useState(storedTheme || 'light');
 
   const darkTheme = () => {
     setThemeMode('dark');
@@ -14,6 +15,10 @@ function App() {
   };
 
   useEffect(() => {
+    //menyimpan tema yang dipilih ke local storage
+    localStorage.setItem('themeMode', themeMode);
+
+    //menerapkan ke elemen html
     document.querySelector('html').classList.remove('dark', 'light');
     document.querySelector('html').classList.add(themeMode);
   }, [themeMode]);
