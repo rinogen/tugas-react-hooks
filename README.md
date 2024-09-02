@@ -5,7 +5,7 @@
 ### 1. Beranda
 
 ![Beranda](./src/assets/images/Beranda.png)
-![BerandaDark](./src/assets/images/Beranda_dark.png)
+![Beranda](./src/assets/images/Beranda_dark.png)
 
 ### 2. Tentang Kami
 
