@@ -1,8 +1,20 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ThemeBtn from '../button/ThemeBtn';
+import { useContext } from 'react';
+import { AuthContext } from '../../context/auth';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const { isAuthenticated, login, logout } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleAuthAction = () => {
+    if (isAuthenticated) {
+      logout();
+      navigate('/login');
+    }
+  };
+
   return (
     <nav className="bg-tranparent dark:bg-gray-900">
       <div className="flex flex-wrap items-center justify-start lg:px-20 xl:px-40 px-10 py-3 relative lg:gap-y-2 gap-y-4 gap-x-4">
@@ -41,9 +53,11 @@ const Header = () => {
             </span>
           </li>
           <div className="md:inline hidden">
-            <li className="border-[1px] border-[#009EA9] rounded-lg px-3 py-2 text-[#009EA9] cursor-pointer max-lg:w-fit hover:bg-[#009EA9] hover:text-white transition-colors duration-300">
-              <Link to="/login">Login</Link>
-            </li>
+            <button
+              className="border-[1px] border-[#009EA9] rounded-lg px-3 py-2 text-[#009EA9] cursor-pointer max-lg:w-fit hover:bg-[#009EA9] hover:text-white transition-colors duration-300"
+              onClick={handleAuthAction}>
+              {isAuthenticated ? 'Logout' : 'Login'}
+            </button>
           </div>
         </ul>
         <ThemeBtn />

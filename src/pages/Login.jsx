@@ -1,7 +1,17 @@
 import React from 'react';
 import Navbar from '../components/header/Navbar';
+import { AuthContext } from '../context/auth';
+import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
 
 const Login = () => {
+  const { login } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    login();
+    navigate('/');
+  };
   return (
     <>
       <Navbar />
@@ -31,7 +41,7 @@ const Login = () => {
               <div className="flex flex-col border text-dark dark:text-white justify-center items-center w-full h-screen lg:h-full p-10">
                 <div className="w-full">
                   <div className="flex justify-between items-center">
-                    <div className="text-2xl text-paletteText-primary font-bold">
+                    <div className="text-2xl text-palette Text-primary font-bold">
                       Login
                     </div>
                     <a href="/">
@@ -46,41 +56,14 @@ const Login = () => {
                   </div>
                 </div>
                 <div className="w-full">
-                  <div className="w-full space-y-2 mb-4">
-                    <label className="block text-sm font-semibold text-paletteText-primary text-left">
-                      Alamat Email
-                    </label>
-                    <input
-                      className="appearance-none border text-black rounded w-full py-2 px-3 focus:outline-none false"
-                      id="username"
-                      type="text"
-                      placeholder="johndoe@gmail.com"
-                    />
-                  </div>
-                  <div className="w-full space-y-2 mb-6">
-                    <label className="block text-sm font-semibold text-paletteText-primary text-left">
-                      Kata Sandi
-                    </label>
-                    <div className="relative">
-                      <input
-                        className="appearance-none border text-black rounded w-full py-2 px-3 focus:outline-none false"
-                        id="password"
-                        type="password"
-                        placeholder="Masukan Kata Sandi"
-                      />
-                      <span className="absolute top-1/2 right-1 transform -translate-x-1/2 -translate-y-1/2">
-                        <img
-                          className="w-8 h-8"
-                          src="https://www.svgrepo.com/show/474045/eye-close.svg"
-                          alt=""
-                        />
-                      </span>
-                    </div>
+                  <div className="text-palette Text-primary font-light mb-4">
+                    Silahkan Tekan Login Untuk Masuk
                   </div>
                   <div className="w-full mb-6">
                     <button
                       className="w-full py-2 bg-[#009EA9] text-white rounded-lg "
-                      type="submit">
+                      type="submit"
+                      onClick={handleLogin}>
                       Login
                     </button>
                   </div>
