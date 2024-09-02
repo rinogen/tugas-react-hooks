@@ -23,16 +23,7 @@ const Media = () => {
                       {media.desc}
                     </p>
                   </section>
-                  <section className="md:grid md:grid-cols-3 sm:flex sm:flex-row w-full h-full justify-self-stretch">
-                    {media.articels.map((article, index) => (
-                      <Card
-                        key={index}
-                        cardTitle={article.title}
-                        cardImg={article.img}
-                        cardDescription={article.detail}
-                      />
-                    ))}
-                  </section>
+                  <Card />
                 </div>
               </div>
             </div>
