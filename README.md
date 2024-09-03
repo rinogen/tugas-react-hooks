@@ -20,7 +20,9 @@
 ### 4. Media
 
 ![Media](./src/assets/images/Media.png)
+![Media2](./src/assets/images/Media2.png)
 ![MediaDark](./src/assets/images/Media_dark.png)
+![MediaDark2](./src/assets/images/Media_dark2.png)
 
 ### 5. Kontak
 
