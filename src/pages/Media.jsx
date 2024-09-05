@@ -15,7 +15,7 @@ const Media = () => {
                   <section className="flex flex-col mb-4">
                     <section className="w-fit">
                       <div className="text-center flex justify-center rounded-full border border-b-4 border-[#4DB3C5] w-[80px] mb-2 mx-auto"></div>
-                      <h2 className=" text-black dark:text-white w-fit text-3xl font-bold text-[#0E0F11]">
+                      <h2 className=" text-black dark:text-white w-fit text-3xl font-bold ">
                         {media.title}
                       </h2>
                     </section>
